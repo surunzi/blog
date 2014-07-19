@@ -1,0 +1,77 @@
+* {
+    font-family: 微软雅黑;
+}
+
+body {
+    background: url(../img/bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+.posts {
+    list-style: none;
+    padding-left: 8px;
+}
+
+.posts .post-date {
+    background-color: #b95553;
+    padding: 4px 5px;
+    color: #fff;
+}
+
+.posts .post-link {
+    color: #000;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+.posts .post-link:hover {
+    color: #555;
+    text-decoration: underline;
+}
+
+#container {
+    background: rgba(255, 255, 255, 0.8);
+    width: 700px;
+    padding: 50px 60px;
+}
+
+#header .title {
+    color: #b95553;
+    font-size: 80px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#nav {
+    position: fixed;
+    left: 780px;
+    top: 45px;
+    list-style: none;
+}
+
+#nav a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 5px 10px;
+    display: inline-block;
+    background-color: #b95553;
+    opacity: 0.8;
+    transition: padding-left .3s, opacity .3s;
+}
+
+#nav a.bigger {
+    padding-bottom: 30px;
+}
+
+#nav a:hover {
+    padding-left: 30px;
+    opacity: 1;
+}
+
+#nav li {
+    margin-bottom: 15px;
+}

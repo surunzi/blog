@@ -1,0 +1,12 @@
+# Site settings
+title: RedHood's Notes
+email: your-email@domain.com
+description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+baseurl: "http://surunzi.github.io"
+url: "http://surunzi.github.io"
+github_username:  jekyll
+exclude: ['run.bat', 'build.bat', 'run.sh', 'build.sh']
+
+# Build settings
+markdown: kramdown
+permalink: pretty
