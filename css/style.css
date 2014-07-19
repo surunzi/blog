@@ -14,6 +14,10 @@ body {
     padding-left: 8px;
 }
 
+.posts li {
+    margin-bottom: 15px;
+}
+
 .posts .post-date {
     background-color: #b95553;
     padding: 4px 5px;
@@ -31,6 +35,34 @@ body {
     text-decoration: underline;
 }
 
+#article .title {
+    font-size: 30px;
+    font-weight: normal;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #b95553;
+}
+
+#article a {
+    color: #b95553;
+}
+
+#article blockquote {
+    border-left: 5px solid #b95553;
+    margin-left: 0;
+    padding-left: 10px;
+}
+
+#article code {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    display: block;
+    color: #fff;
+}
+
+#article strong {
+    color: #b95553;
+}
+
 #container {
     background: rgba(255, 255, 255, 0.8);
     width: 700px;
@@ -42,6 +74,7 @@ body {
     font-size: 80px;
     font-weight: bold;
     text-decoration: none;
+    margin-left: -6px;
 }
 
 #nav {
