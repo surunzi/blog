@@ -63,6 +63,25 @@ body {
     color: #b95553;
 }
 
+#article table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#article table td, #article table th{
+    border: 1px solid #b95553;
+    padding: 6px 10px;
+}
+
+#article table th {
+    color: #fff;
+    background: #b95553;
+}
+
+#article ul {
+    list-style-type: square;
+}
+
 #container {
     background: rgba(255, 255, 255, 0.8);
     width: 700px;
