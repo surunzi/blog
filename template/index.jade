@@ -1,0 +1,33 @@
+doctype html
+
+html
+    head
+        meta(charset='utf-8')
+        title Surunzi
+        link(rel='stylesheet' href='style.css')
+    body
+        .container
+            .painting.section
+                h2
+                    span.first P
+                    span ainting
+                ul
+                    each item in painting
+                        li
+                            a(href='http://www.pixiv.net/member_illust.php?mode=medium&illust_id=#{item.id}' target='_blank')
+                                img(src='#{item.cover}' alt='#{item.name}')
+            .project.section
+                h2
+                    span.first P
+                    span roject
+                p Building...
+            .article.section
+                h2
+                    span.first A
+                    span rticle
+                p Building...
+            .contact.section
+                h2
+                    span.first C
+                    span ontact
+                p Email: surunzi@foxmail.com

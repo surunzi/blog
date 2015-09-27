@@ -1,0 +1,23 @@
+{
+  "name": "surunzi",
+  "version": "0.0.1",
+  "description": "Personal website of surunzi(redhoodsu).",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index && sass --no-cache --sourcemap=none template/style.scss:build/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surunzi/surunzi.github.io.git"
+  },
+  "author": "redhoodsu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/surunzi/surunzi.github.io/issues"
+  },
+  "homepage": "https://github.com/surunzi/surunzi.github.io#readme",
+  "dependencies": {
+    "async": "^1.4.2",
+    "jade": "^1.11.0"
+  }
+}
