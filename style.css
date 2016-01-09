@@ -30,10 +30,10 @@ a {
   content: ''; }
 .painting li {
   float: left;
-  width: 300px;
-  height: 300px; }
+  width: 300px; }
   .painting li img {
-    display: block; }
+    display: block;
+    width: 100%; }
     .painting li img:hover {
       opacity: 0.8; }
 
@@ -47,3 +47,10 @@ a {
     text-transform: uppercase;
     margin-right: 20px;
     color: #08c; }
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 2em; }
+
+  .painting li {
+    width: 50%; } }
