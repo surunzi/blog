@@ -9,12 +9,18 @@ ul {
     padding: 0;
 }
 
+a {
+    color: #000;
+    text-decoration: none;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .section {
+    margin-bottom: 60px;
     h2 {
         .first {
             background-color: #08c;
@@ -36,9 +42,38 @@ ul {
         float: left;
         img {
             display: block;
+            width: 100%;
             &:hover {
                 opacity: 0.8;
             }
+        }
+        width: 300px;
+    }
+}
+
+.project {
+    li {
+        margin: 25px 0;
+        a {
+            display: block;
+            border-bottom: 1px dotted #08c;
+        }
+        .name {
+            font-size: 25px;
+            text-transform: uppercase;
+            margin-right: 20px;
+            color: #08c;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 2em;
+    }
+    .painting {
+        li {
+            width: 50%;
         }
     }
 }

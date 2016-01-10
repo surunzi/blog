@@ -1,3 +1,17 @@
 [
-
+    {
+        "name": "liriliri",
+        "url" : "https://github.com/liriliri/WebVN",
+        "desc": "A HTML5 game engine designed specifically for making visual novels."
+    },
+    {
+        "name": "visualmusic",
+        "url" : "https://github.com/surunzi/VisualMusic",
+        "desc": "HTML5 music visualization (Chrome only)."
+    },
+    {
+        "name": "eustia",
+        "url" : "https://github.com/liriliri/eustia",
+        "desc": "Provides common JavaScript functions to build your own utility library."
+    }
 ]

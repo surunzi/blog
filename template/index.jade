@@ -3,6 +3,7 @@ doctype html
 html
     head
         meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
         title Surunzi
         link(rel='stylesheet' href='style.css')
     body
@@ -20,7 +21,13 @@ html
                 h2
                     span.first P
                     span roject
-                p Building...
+                ul
+                    each item in project
+                        li
+                            a(href="#{item.url}")
+                                span.name #{item.name}
+                            p.
+                                #{item.desc}
             .article.section
                 h2
                     span.first A
