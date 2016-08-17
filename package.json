@@ -4,7 +4,6 @@
   "description": "Personal website of surunzi(redhoodsu).",
   "main": "index.js",
   "scripts": {
-    "build": "node index && sass --no-cache --sourcemap=none template/style.scss:build/style.css"
   },
   "repository": {
     "type": "git",
@@ -19,5 +18,8 @@
   "dependencies": {
     "async": "^1.4.2",
     "jade": "^1.11.0"
+  },
+  "devDependencies": {
+    "node-sass": "^3.8.0"
   }
 }

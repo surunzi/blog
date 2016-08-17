@@ -1,39 +1,40 @@
-var jade  = require('jade'),
+var jade = require('jade'),
     async = require('async'),
-    fs    = require('fs');
+    sass = require('node-sass'),
+    fs = require('fs');
 
-var article  = require('./post/article.json'),
+var article = require('./post/article.json'),
     painting = require('./post/painting.json'),
-    project  = require('./post/project');
+    project = require('./post/project');
 
-function readTpl(callback)
+function readTpl(cb)
 {
     console.log('Step: read template');
 
     var indexTpl;
 
     async.waterfall([
-        function (callback)
+        function (cb)
         {
             fs.readFile('./template/index.jade', 'utf8', function (err, data)
             {
                 indexTpl = jade.compile(data, {pretty: true});
-                callback();
+                cb();
             });
         }
     ], function ()
     {
-        callback(null, {
+        cb(null, {
             indexTpl: indexTpl
         });
     });
 }
 
-function renderTpl(tpls, callback)
+function renderTpl(tpls, cb)
 {
     console.log('Step: render template');
 
-    callback(null, {
+    cb(null, {
         index: tpls.indexTpl({
             article : article,
             painting: painting,
@@ -42,21 +43,42 @@ function renderTpl(tpls, callback)
     });
 }
 
-function outputResult(results, callback)
+function outputResult(results, cb)
 {
     console.log('Step: output result');
 
-    fs.writeFile('./build/index.html', results.index, 'utf8', function ()
+    fs.writeFile('./build/index.html', results.index, 'utf8', function (err)
     {
-        callback();
+        cb(err);
+    });
+}
+
+function buildCss(cb)
+{
+    console.log('Sep: build css');
+
+    sass.render({
+        file: 'template/style.scss',
+        outputStyle: 'compressed'
+    }, function (err, result)
+    {
+        if (err) return cb(err);
+
+        fs.writeFile('./build/style.css', result.css, function (err)
+        {
+            cb(err);
+        });
     });
 }
 
 async.waterfall([
+    buildCss,
     readTpl,
     renderTpl,
     outputResult
-], function ()
+], function (err)
 {
+    if (err) return console.error(err);
+
     console.log('Done!');
 });
