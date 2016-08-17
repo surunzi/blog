@@ -47,7 +47,7 @@ function outputResult(results, cb)
 {
     console.log('Step: output result');
 
-    fs.writeFile('./build/index.html', results.index, 'utf8', function (err)
+    fs.writeFile('./dist/index.html', results.index, 'utf8', function (err)
     {
         cb(err);
     });

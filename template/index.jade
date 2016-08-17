@@ -32,7 +32,10 @@ html
                 h2
                     span.first A
                     span rticle
-                p Building...
+                ul
+                    each item in article
+                        li
+                            a(href="#{item.url}" target="_blank")= item.title
             .contact.section
                 h2
                     span.first C

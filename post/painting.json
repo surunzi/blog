@@ -34,5 +34,15 @@
         "id"   : 53922718,
         "cover": "http://7xn2zy.com1.z0.glb.clouddn.com/blog_eustia.jpg"
 
+    },
+    {
+        "name": "Robot Love",
+        "id": 55291898,
+        "cover": "http://7xn2zy.com1.z0.glb.clouddn.com/blog_robotLove.jpg"
+    },
+    {
+        "name": "Eruda",
+        "id": 58437387,
+        "cover": "http://7xn2zy.com1.z0.glb.clouddn.com/blog_eruda.jpg"
     }
 ]

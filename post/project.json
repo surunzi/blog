@@ -13,5 +13,10 @@
         "name": "eustia",
         "url" : "https://github.com/liriliri/eustia",
         "desc": "Provides common JavaScript functions to build your own utility library."
+    },
+    {
+        "name": "eruda",
+        "url": "https://github.com/liriliri/eruda",
+        "desc": "Mobile JavaScript console."
     }
 ]

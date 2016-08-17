@@ -67,6 +67,16 @@ a {
     }
 }
 
+.article {
+    a {
+        color: #08c;
+        text-decoration: underline;
+        font-size: 20px;
+        display: block;
+        margin: 25px 0;
+    }
+}
+
 @media (max-width: 1200px) {
     .container {
         padding: 0 2em;
