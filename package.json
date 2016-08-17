@@ -3,8 +3,6 @@
   "version": "0.0.1",
   "description": "Personal website of surunzi(redhoodsu).",
   "main": "index.js",
-  "scripts": {
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/surunzi/surunzi.github.io.git"
@@ -15,11 +13,9 @@
     "url": "https://github.com/surunzi/surunzi.github.io/issues"
   },
   "homepage": "https://github.com/surunzi/surunzi.github.io#readme",
-  "dependencies": {
-    "async": "^1.4.2",
-    "jade": "^1.11.0"
-  },
   "devDependencies": {
+    "async": "^1.4.2",
+    "jade": "^1.11.0",
     "node-sass": "^3.8.0"
   }
 }

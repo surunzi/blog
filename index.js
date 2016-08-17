@@ -64,7 +64,7 @@ function buildCss(cb)
     {
         if (err) return cb(err);
 
-        fs.writeFile('./build/style.css', result.css, function (err)
+        fs.writeFile('./dist/style.css', result.css, function (err)
         {
             cb(err);
         });
