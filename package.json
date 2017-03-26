@@ -14,8 +14,7 @@
   },
   "homepage": "https://github.com/surunzi/surunzi.github.io#readme",
   "devDependencies": {
-    "async": "^1.4.2",
     "jade": "^1.11.0",
-    "node-sass": "^3.8.0"
+    "node-sass": "^4.5.0"
   }
 }

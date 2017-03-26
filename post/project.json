@@ -1,5 +1,20 @@
 [
     {
+        "name": "eustia",
+        "url" : "https://github.com/liriliri/eustia",
+        "desc": "Tool for building your own utility library."
+    },
+    {
+        "name": "eruda",
+        "url": "https://github.com/liriliri/eruda",
+        "desc": "Console for mobile browsers."
+    },
+    {
+        "name": "eris",
+        "url": "https://github.com/liriliri/eris",
+        "desc": "Eustia modules."
+    },
+    {
         "name": "liriliri",
         "url" : "https://github.com/liriliri/WebVN",
         "desc": "A HTML5 game engine designed specifically for making visual novels."
@@ -8,15 +23,5 @@
         "name": "visualmusic",
         "url" : "https://github.com/surunzi/VisualMusic",
         "desc": "HTML5 music visualization (Chrome only)."
-    },
-    {
-        "name": "eustia",
-        "url" : "https://github.com/liriliri/eustia",
-        "desc": "Provides common JavaScript functions to build your own utility library."
-    },
-    {
-        "name": "eruda",
-        "url": "https://github.com/liriliri/eruda",
-        "desc": "Console for mobile browsers"
     }
 ]

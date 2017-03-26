@@ -1,7 +1,8 @@
 var jade = require('jade'),
-    async = require('async'),
     sass = require('node-sass'),
     fs = require('fs');
+    
+var util = require('./util');
 
 var article = require('./post/article.json'),
     painting = require('./post/painting.json'),
@@ -13,7 +14,7 @@ function readTpl(cb)
 
     var indexTpl;
 
-    async.waterfall([
+    util.waterfall([
         function (cb)
         {
             fs.readFile('./template/index.jade', 'utf8', function (err, data)
@@ -71,7 +72,16 @@ function buildCss(cb)
     });
 }
 
-async.waterfall([
+function mkdir(cb) 
+{
+    util.mkdir('dist', function () 
+    {
+        cb();
+    });
+}
+
+util.waterfall([
+    mkdir,
     buildCss,
     readTpl,
     renderTpl,
