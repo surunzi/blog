@@ -6,17 +6,17 @@ html
         meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
         title REDHOOD 
         link(rel='stylesheet' href='style.css')
+        script.
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-52367952-4', 'auto');
+            ga('send', 'pageview');
     body
         .container
-            .painting.section
-                h2
-                    span.first P
-                    span ainting
-                ul
-                    each item in painting
-                        li
-                            a(href='http://www.pixiv.net/member_illust.php?mode=medium&illust_id=#{item.id}' target='_blank')
-                                img(src='#{item.cover}' alt='#{item.name}')
+            h1. 
+                It's Never Too Late to Change.
             .project.section
                 h2
                     span.first P
@@ -41,3 +41,12 @@ html
                     span.first C
                     span ontact
                 p Email: surunzi@foxmail.com
+            .painting.section
+                h2
+                    span.first P
+                    span ainting
+                ul
+                    each item in painting
+                        li
+                            a(href='http://www.pixiv.net/member_illust.php?mode=medium&illust_id=#{item.id}' target='_blank')
+                                img(src='#{item.cover}' alt='#{item.name}')
