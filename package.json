@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Personal website of surunzi(redhoodsu).",
   "main": "index.js",
+  "scripts": {
+    "build": "node ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/surunzi/surunzi.github.io.git"
@@ -14,6 +17,7 @@
   },
   "homepage": "https://github.com/surunzi/surunzi.github.io#readme",
   "devDependencies": {
+    "html-minifier": "^3.4.2",
     "jade": "^1.11.0",
     "node-sass": "^4.5.0"
   }

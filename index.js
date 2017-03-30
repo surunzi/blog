@@ -1,5 +1,6 @@
 var jade = require('jade'),
     sass = require('node-sass'),
+    minify = require('html-minifier').minify,
     fs = require('fs');
     
 var util = require('./util');
@@ -48,7 +49,10 @@ function outputResult(results, cb)
 {
     console.log('Step: output result');
 
-    fs.writeFile('./dist/index.html', results.index, 'utf8', function (err)
+    fs.writeFile('./dist/index.html', minify(results.index, {
+        collapseWhitespace: true,
+        minifyJS: true
+    }), 'utf8', function (err)
     {
         cb(err);
     });
