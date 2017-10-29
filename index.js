@@ -1,98 +1,71 @@
-var jade = require('jade'),
+const jade = require('jade'),
     sass = require('node-sass'),
     minify = require('html-minifier').minify,
+    promisify = require('util').promisify,
     fs = require('fs');
     
-var util = require('./util');
+const util = require('./util');
 
-var article = require('./post/article.json'),
+const article = require('./post/article.json'),
     painting = require('./post/painting.json'),
     project = require('./post/project');
 
-function readTpl(cb)
+const mkdir = promisify(util.mkdir),
+    readFile = promisify(fs.readFile),
+    copy = promisify(require('copy')),
+    writeFile = promisify(fs.writeFile);
+
+sass.render = promisify(sass.render);
+
+async function readTpl()
 {
     console.log('Step: read template');
 
-    var indexTpl;
+    let data = await readFile('./template/index.jade', 'utf8');
 
-    util.waterfall([
-        function (cb)
-        {
-            fs.readFile('./template/index.jade', 'utf8', function (err, data)
-            {
-                indexTpl = jade.compile(data, {pretty: true});
-                cb();
-            });
-        }
-    ], function ()
-    {
-        cb(null, {
-            indexTpl: indexTpl
-        });
-    });
+    let indexTpl = jade.compile(data, {pretty: true});
+
+    return indexTpl;
 }
 
-function renderTpl(tpls, cb)
+function renderTpl(tpl)
 {
     console.log('Step: render template');
 
-    cb(null, {
-        index: tpls.indexTpl({
-            article : article,
-            painting: painting,
-            project : project
-        })
+    return tpl({
+        article,
+        painting,
+        project
     });
 }
 
-function outputResult(results, cb)
+async function outputResult(result)
 {
     console.log('Step: output result');
 
-    fs.writeFile('./dist/index.html', minify(results.index, {
+    await writeFile('./dist/index.html', minify(result, {
         collapseWhitespace: true,
         minifyJS: true
-    }), 'utf8', function (err)
-    {
-        cb(err);
-    });
+    }), 'utf8');
 }
 
-function buildCss(cb)
+async function buildCss()
 {
-    console.log('Sep: build css');
+    console.log('Step: build css');
 
-    sass.render({
+    let result = await sass.render({
         file: 'template/style.scss',
         outputStyle: 'compressed'
-    }, function (err, result)
-    {
-        if (err) return cb(err);
-
-        fs.writeFile('./dist/style.css', result.css, function (err)
-        {
-            cb(err);
-        });
     });
+
+    await writeFile('./dist/style.css', result.css);
 }
 
-function mkdir(cb) 
-{
-    util.mkdir('dist', function () 
-    {
-        cb();
-    });
-}
-
-util.waterfall([
-    mkdir,
-    buildCss,
-    readTpl,
-    renderTpl,
-    outputResult
-], function (err)
-{
-    if (err) return console.error(err);
-
-    console.log('Done!');
-});
+(async () => {
+    await mkdir('dist');
+    await buildCss();
+    let result = renderTpl(await readTpl());
+    await outputResult(result);
+    console.log('Step: copy img');
+    await copy('./img/*.jpg', './dist/img');
+})();

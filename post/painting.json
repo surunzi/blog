@@ -1,48 +1,57 @@
 [
     {
-        "name" : "Blade & Soul",
-        "id"   : 45089682,
-        "cover": "http://7xn2zy.com1.z0.glb.clouddn.com/blog_bladeAndSoul.jpg"
+        "name": "Blade & Soul",
+        "id": 45089682,
+        "cover": "img/bladeAndSoul.jpg"
     },
     {
-        "name" : "Kaneziki",
-        "id"   : 46094286,
-        "cover": "http://7xn2zy.com1.z0.glb.clouddn.com/blog_kaneziki.jpg"
+        "name": "Kaneziki",
+        "id": 46094286,
+        "cover": "img/kaneziki.jpg"
     },
     {
-        "name" : "Liu KanShan",
-        "id"   : 52331216,
-        "cover": "http://7xn2zy.com1.z0.glb.clouddn.com/blog_liuKanShan.jpg"
+        "name": "Liu KanShan",
+        "id": 52331216,
+        "cover": "img/liuKanShan.jpg"
     },
     {
-        "name" : "Elf",
-        "id"   : 47346349,
-        "cover": "http://7xn2zy.com1.z0.glb.clouddn.com/blog_elf.jpg"
+        "name": "Elf",
+        "id": 47346349,
+        "cover": "img/elf.jpg"
     },
     {
-        "name" : "Me, Robot Girl",
-        "id"   : 44272463,
-        "cover": "http://7xn2zy.com1.z0.glb.clouddn.com/blog_meRobotGirl.jpg"
+        "name": "Me, Robot Girl",
+        "id": 44272463,
+        "cover": "img/meRobotGirl.jpg"
     },
     {
-        "name" : "Yue Zhuo",
-        "id"   : 41233059,
-        "cover": "http://7xn2zy.com1.z0.glb.clouddn.com/blog_yueZhuo.jpg"
+        "name": "Yue Zhuo",
+        "id": 41233059,
+        "cover": "img/yueZhuo.jpg"
     },
     {
-        "name" : "Eustia",
-        "id"   : 53922718,
-        "cover": "http://7xn2zy.com1.z0.glb.clouddn.com/blog_eustia.jpg"
-
+        "name": "Eustia",
+        "id": 53922718,
+        "cover": "img/eustia.jpg"
     },
     {
         "name": "Robot Love",
         "id": 55291898,
-        "cover": "http://7xn2zy.com1.z0.glb.clouddn.com/blog_robotLove.jpg"
+        "cover": "img/robotLove.jpg"
     },
     {
         "name": "Eruda",
         "id": 58437387,
-        "cover": "http://7xn2zy.com1.z0.glb.clouddn.com/blog_eruda.jpg"
+        "cover": "img/eruda.jpg"
+    },
+    {
+        "name": "Zz",
+        "id": 64231764,
+        "cover": "img/zz.jpg"
+    },
+    {
+        "name": "magpie",
+        "id": 64621759,
+        "cover": "img/magpie.jpg"
     }
 ]
