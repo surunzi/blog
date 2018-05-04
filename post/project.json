@@ -10,9 +10,9 @@
         "desc": "Console for mobile browsers."
     },
     {
-        "name": "eris",
-        "url": "https://github.com/liriliri/eris",
-        "desc": "Eustia modules."
+        "name": "licia",
+        "url": "https://github.com/liriliri/licia",
+        "desc": "Useful utility collection with zero dependencies."
     },
     {
         "name": "liriliri",
