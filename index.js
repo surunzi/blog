@@ -1,8 +1,8 @@
-const jade = require('jade'),
-    sass = require('node-sass'),
-    minify = require('html-minifier').minify,
-    promisify = require('util').promisify,
-    fs = require('fs');
+const jade = require('jade');
+const sass = require('node-sass');
+const minify = require('html-minifier').minify;
+const promisify = require('util').promisify;
+const fs = require('fs');
     
 const util = require('./util');
 
@@ -68,4 +68,5 @@ async function buildCss()
     await outputResult(result);
     console.log('Step: copy img');
     await copy('./img/*.jpg', './dist/img');
+    await copy('./*.jpg', './dist');
 })();
