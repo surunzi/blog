@@ -10,10 +10,10 @@ const article = require('./post/article.json'),
     painting = require('./post/painting.json'),
     project = require('./post/project');
 
-const mkdir = promisify(util.mkdir),
-    readFile = promisify(fs.readFile),
-    copy = promisify(require('copy')),
-    writeFile = promisify(fs.writeFile);
+const mkdir = promisify(util.mkdir);
+const readFile = promisify(fs.readFile);
+const copy = promisify(require('copy'));
+const writeFile = promisify(fs.writeFile);
 
 sass.render = promisify(sass.render);
 
@@ -68,5 +68,4 @@ async function buildCss()
     await outputResult(result);
     console.log('Step: copy img');
     await copy('./img/*.jpg', './dist/img');
-    await copy('./*.jpg', './dist');
 })();
